@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout2.html}"
+>
+<div layout:fragment="content">
+
+  <form action="/member/new" role="form" method="post"  th:object="${memberFormDto}">
+    <div class="container margin-main">
+      <!-- 1번 섹션 -->
+      <div>
+        <h2><strong color="sky" class="first-sen">imFolio를 <br>방문해주셔서 감사합니다</strong></h2>
+        <p class="fw-bolder p1">회원가입을 통해, 포트폴리오를 등록해보세요</p>
+      </div>
+      <!-- 2번 섹션 -->
+
+      <div>
+        <!-- 이름 박스 -->
+        <div>
+          <div th:for="name" class="sub-title">이름</div>
+          <input type="text" th:field="*{name}" placeholder="이름을 입력해주세요." class="login-box">
+          <p th:if="${#fields.hasErrors('name')}" th:errors="*{name}" class="fieldError">Incorrect data</p>
+        </div>
+        <!-- 이메일 박스 -->
+        <div>
+          <div th:for="email" class="sub-title">이메일</div>
+          <input th:field="*{email}" type="email" name="loginPw" placeholder="이메일 주소를 입력해주세요." class="login-box">
+          <p th:if="${#fields.hasErrors('email')}" th:errors="*{email}" class="fieldError">Incorrect data</p>
+        </div>
+
+        <!-- 패스워드 박스 -->
+        <div>
+          <div th:for="password" class="sub-title">비밀번호</div>
+          <input type="password" th:field="*{password}" placeholder="비밀번호를 입력해주세요." class="login-box">
+          <p th:if="${#fields.hasErrors('password')}" th:errors="*{password}" class="fieldError">Incorrect data</p>
+        </div>
+
+        <!-- 주소 박스 -->
+        <div>
+          <div th:for="address" class="sub-title">주소</div>
+          <input type="text" th:field="*{address}" placeholder="주소를 입력해주세요." class="login-box">
+          <p th:if="${#fields.hasErrors('address')}" th:errors="*{address}" class="fieldError">Incorrect data</p>
+        </div>
+      </div>
+      <!-- 3번째 영역 -->
+      <!-- 회원가입 버튼 -->
+      <button type="submit" class="login-button">Sign Up</button>
+      <!-- 로그인 -->
+      <div>
+        <p class="fw-bolder" style=" margin-top: 50px;">회원이 이시라면, 지금 로그인하세요.</p>
+        <div><button type="button" class="join-button">Login</button></div>
+
+      </div>
+
+
+
+      <div class="last"></div>
+
+    </div>
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+  </form>
+</div>
+</html>

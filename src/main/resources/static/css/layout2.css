@@ -1,0 +1,144 @@
+body {
+    margin: 0px;
+    font-family: 'Montserrat', 'Raleway', "Apple SD Gothic Neo", "Malgun Gothic", 'Noto Sans', sans-serif;
+
+}
+
+nav {
+    height: 80px;
+    background-color: white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-bottom: 1px solid rgb(224, 224, 224);
+
+
+}
+
+a {
+    color: #303437;
+    text-decoration: none;
+}
+
+.nav-item {
+    padding: 28px 17px;
+    font-weight: 700;
+}
+
+.title {
+    padding: 28px 17px;
+    font-weight: 700;
+    width: 70px;
+    height: 17px;
+    font-size: 40px;
+}
+
+/* .container{
+  border: solid 1px;
+} */
+
+/* main margin */
+.margin-main {
+    max-width: 584px;
+    width: 100%;
+    margin: 0px auto;
+    padding: 0px 20px;
+    margin-top: 80px;
+}
+
+.login-box{
+
+    display: block;
+    width: 100%;
+    height: 56px;
+    padding: 0px 16px;
+    background: rgb(255, 255, 255);
+    border: 1px solid rgb(229, 230, 232);
+    font-size: 16px;
+
+    margin-bottom: 17px
+
+;
+
+}
+
+.login-button {
+    font-size: 20px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    transition: color 0.15s ease-in-out 0s, background-color 0.15s ease-in-out 0s, border-color 0.15s ease-in-out 0s, box-shadow 0.15s ease-in-out 0s;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    color: rgb(255, 255, 255);
+    background-color: rgb(28, 171, 226);
+    border-color: rgb(28, 171, 226);
+}
+
+.login-button:hover{
+    background: #1A6DFF;
+    border-color: #1A6DFF;
+    color: #fff;
+    /* rgb(28, 171, 226); */
+}
+
+.join-button{
+    font-size: 20px;
+    padding: 12px 20px;
+    box-sizing: border-box;
+    font-weight: bold;
+    border-width: 1px;
+    border-style: solid;
+    background-color: white;
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    color: rgb(28, 171, 226);
+    border-color: rgb(28, 171, 226);
+}
+
+.join-button:hover{
+
+    color: #fff;
+    background-color: rgb(28, 171, 226);
+    border-color: rgb(28, 171, 226);
+}
+
+.first-sen{
+    display: inline-block;
+    line-height: 1.56;
+    letter-spacing: -0.8px;
+    color: rgb(28, 171, 226);
+    font-size: 40px;
+    font-weight: 400 !important;
+}
+
+p1{
+    margin-top: 30px;
+
+}
+
+input:focus {
+    border: 1px solid rgb(37, 137, 201);
+}
+
+.last{
+    padding-bottom: 240px;
+}
+
+.sub-title {
+    font-size: 16px;
+    font-stretch: normal;
+    font-style: normal;
+    line-height: 1.75;
+    letter-spacing: -0.8px;
+    display: inline-block;
+    position: relative;
+}
+
+.fieldError {
+    color: #bd2130;
+}

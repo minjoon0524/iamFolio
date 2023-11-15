@@ -1,0 +1,48 @@
+####################################
+# 포트 및 프로젝트 명칭 설정
+####################################
+server:
+  port: 80                   # 포트 설정
+
+spring:
+  application:
+    name: springboot-portfolio    # 프로젝트명 설정
+
+  thymeleaf:
+    cache: false            # 캐쉬 없음
+
+####################################
+# 데이터베이스 설정
+####################################
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/spring_portfolio?serverTimezone=UTC&useUnicode=true&characterEncoding=utf8&allowPublicKeyRetrieval=true&useSSL=false
+    username: root
+    password: 1234
+
+
+  ####################################
+  # JPA 설정
+  ####################################
+  jpa:
+    hibernate:
+      ddl-auto: create     # create, update, ...
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
+    show-sql: true           # SQL 구문 보이기
+    properties:
+      hibernate:
+        format_sql: true    # 포멧 처리해서 보이기
+    database-platform: org.hibernate.dialect.MySQL8Dialect  # MySQL8 버전 사용
+
+####################################
+# Spring Security 설정
+####################################
+  security:
+    user:
+      name: test@test.com
+      password: 1111
+  servlet:
+    multipart:
+      max-file-size: 10MB         # 파일 업로드 최대 크기
+      max-request-size: 100MB      # 파일 업로드 최대 크기

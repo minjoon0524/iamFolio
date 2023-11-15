@@ -1,0 +1,123 @@
+body {
+    margin: 0px;
+    font-family: 'Montserrat', 'Raleway', "Apple SD Gothic Neo", "Malgun Gothic", 'Noto Sans', sans-serif;
+
+}
+
+nav {
+    height: 80px;
+    background-color: #1A6DFF;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+}
+
+a {
+    color: #303437;
+    text-decoration: none;
+}
+
+.nav-item {
+    padding: 28px 17px;
+    font-weight: 700;
+}
+
+.title {
+    padding: 28px 17px;
+    font-weight: 700;
+    width: 70px;
+    height: 17px;
+    font-size: 40px;
+}
+
+.mains {
+    height: 700px;
+    background-size: 140%;
+    background-image: url(../img/main_top_bak.jpg);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.headline {
+    font-size: 120px;
+    line-height: 166px;
+    color: white;
+    font-weight: 900;
+    position: relative;
+    left: 225px;
+    padding-bottom: 40px;
+}
+.button-area {
+    text-align: center;
+}
+
+.first-headline{
+    position: relative;
+    left: -2.5em;
+}
+
+.second-headline{
+    position: relative;
+    left: 1.2em;
+}
+
+.button-style {
+    padding: 14px 32px;
+    background-color: white;
+    border-radius: 500px;
+    font-size: inherit;
+    color: #2941ab;
+    font-weight: 700;
+    border: none;
+    text-decoration:none
+}
+
+.button-style:hover {
+    color: #ffffff;
+    background-color: #0053D9;
+    border-color: #0053D9;
+}
+
+
+.padding-y-70 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.text-gray {
+    color: rgba(54,59,62,0.5);
+}
+h3{
+    text-align: center;
+
+}
+
+h5{
+    text-align: center;
+}
+.second-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+
+}
+
+/* 원모양 영역 가운데 정렬 */
+.intro_wrap{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 이미지 margin-bottom */
+.img-bottom{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+

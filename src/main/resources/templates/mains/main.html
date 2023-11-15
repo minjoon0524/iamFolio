@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1.html}"
+>
+<div layout:fragment="content">
+    <div class="mains">
+        <!-- 사진영역 -->
+        <div class="main-container">
+            <div class="headline">
+                <div class="first-headline">
+                    Managing projects
+                </div>
+                <div class="second-headline">
+                    with imfolio
+                </div>
+            </div>
+            <div class="button-area">
+                <button class="button-style">FortFolio 등록하기</button>
+            </div>
+            <!-- 두번째 영역 -->
+
+        </div>
+    </div>
+    <div class="second-container padding-y-70">
+        <div class="second-area">
+            <div>
+                <h3 class="fw-bolder">WELCOME TO MY</h3>
+            </div>
+            <div>
+                <h3 class="fw-bolder">PORTFOLIO</h3>
+            </div>
+            <div class="text-gray">
+                <h5>쉽게 프로젝트 관리하기</h5>
+            </div>
+        </div>
+    </div>
+
+    <div class="container mb-5">
+        <div class="row">
+            <!-- 1번카드 -->
+            <div class="col-md-4 col-sm-12 intro_wrap">
+                <img src="https://vendor-cdn.imweb.me/images/main/newblue_main_sample01.png?v1"
+                     class="img-bottom" width="120" height="120">
+                <h5 class="fw-bolder">Ease of use</h5>
+                <div class="text-gray">#쉬운 사용</div>
+            </div>
+
+
+            <!-- 2번카드 -->
+            <div class="col-md-4 col-sm-12 intro_wrap">
+                <img src="https://vendor-cdn.imweb.me/images/main/newblue_main_sample02.png?v1"
+                     class="img-bottom" width="120" height="120">
+                <h5 class="fw-bolder">Usefulness</h5>
+                <div class="text-gray">#유용함</div>
+            </div>
+            <!-- 3번카드 -->
+            <div class="col-md-4 col-sm-12 intro_wrap">
+                <img src="https://vendor-cdn.imweb.me/images/main/newblue_main_sample03.png?v1"
+                     class="img-bottom" width="120" height="120">
+                <h5 class="fw-bolder">Management</h5>
+                <div class="text-gray">#쉬운 관리</div>
+            </div>
+
+        </div>
+    </div>
+    <footer>
+
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+            crossorigin="anonymous"></script>
+</html>

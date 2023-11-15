@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+
+<!-- 사용자 CSS 추가 -->
+<th:block layout:fragment="css">
+    <style>
+        .error {
+            color: #bd2130;
+        }
+    </style>
+</th:block>
+
+<div layout:fragment="content">
+
+    <form role="form" method="post" action="/member/login">
+        <div class="container margin-main">
+            <!-- 1번 섹션 -->
+            <div>
+                <h2><strong color="sky" class="first-sen">imFolio를 <br>방문해주셔서 감사합니다</strong></h2>
+                <p class="fw-bolder">로그인을 통해, 포트폴리오를 등록해보세요</p>
+            </div>
+            <!-- 2번 섹션 -->
+
+            <div>
+                <!-- 아이디 박스 -->
+                <div>
+                    <input name="email" placeholder="이메일" class="login-box">
+                </div>
+                <!-- 패스워드 박스 -->
+                <div>
+                    <input type="password" name="password" placeholder="비밀번호" class="login-box">
+                </div>
+            </div>
+            <!-- 3번째 영역 -->
+            <!-- 로그인 버튼 -->
+            <button type="text" class="login-button">login</button>
+            <!-- 회원가입 -->
+            <div>
+                <p class="fw-bolder" style=" margin-top: 50px;">회원이 아니시라면, 지금 회원에 가입하세요.</p>
+                <div><button type="button" class="join-button">Sign Up</button></div>
+
+            </div>
+
+            <div class="last"></div>
+
+        </div>
+        <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+    </form>
+
+</div>
+
+</html>
