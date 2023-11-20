@@ -4,7 +4,6 @@ import com.inhatc.portfolio.constant.Role;
 import com.inhatc.portfolio.dto.MemberFormDto;
 import jakarta.persistence.*;
 import lombok.*;
-import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 @Entity
