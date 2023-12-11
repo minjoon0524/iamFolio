@@ -18,6 +18,21 @@ public class SecurityConfig implements WebMvcConfigurer {
 
     @Bean
     public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+        http.formLogin((form) -> form
+                .loginPage("/member/login")
+                .defaultSuccessUrl("/")
+                .failureUrl("/member/login/error")
+                .usernameParameter("email")
+                .passwordParameter("password")
+                .permitAll() );
+
+        http.authorizeHttpRequests(request->request
+                .requestMatchers("css/**").permitAll()
+                .requestMatchers("img/**").permitAll()
+                .requestMatchers("/","/member/**").permitAll()
+                .requestMatchers("/admin/**").hasRole("ADMIN")
+                .anyRequest().authenticated());
+
         http
                 .formLogin(Customizer.withDefaults())
                 .logout(Customizer.withDefaults());

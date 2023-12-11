@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html xmlns:th="http://www.thymeleaf.org"
       xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
-      layout:decorate="~{layouts/layout1}">
+      layout:decorate="~{layouts/layout2.html}">
 
 <!-- 사용자 CSS 추가 -->
 <th:block layout:fragment="css">
@@ -39,7 +39,7 @@
             <!-- 회원가입 -->
             <div>
                 <p class="fw-bolder" style=" margin-top: 50px;">회원이 아니시라면, 지금 회원에 가입하세요.</p>
-                <div><button type="button" class="join-button">Sign Up</button></div>
+                <div><button onclick="location.href='/member/new'" type="button" class="join-button">Sign Up</button></div>
 
             </div>
 

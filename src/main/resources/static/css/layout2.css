@@ -213,5 +213,119 @@ input:focus {
     border-color: #0053D9;
 }
 
+.resellerapply_section {
+    background: url(https://vendor-cdn.imweb.me/images/main/edu_bg.png) no-repeat center 0;
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
+}
 
+.text-bright {
+    color: #fff;
+}
+
+.board_list_info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2em;
+}
+
+.board_list_info .search_form .search_box {
+    display: flex;
+    align-items: center;
+    position: relative;
+    gap: 0.8888888889em;
+    padding-right: 0.4444444444em;
+    padding-bottom: 1px;
+}
+
+.board_list_info .search_form .inp {
+    font-size: 1em;
+    background-color: rgba(255, 255, 255, 0);
+    box-shadow: none !important;
+    height: 2.4444444444em;
+    padding-left: 0.4444444444em;
+    padding-right: 0;
+}
+
+.text_hide {
+    position: absolute;
+    z-index: -1;
+    line-height: 1 !important;
+    font-size: 1px !important;
+    width: 1px !important;
+    height: 1px !important;
+    color: transparent !important;
+    background: transparent !important;
+    overflow: hidden !important;
+    font-size: 1px;
+    text-indent: -99999px;
+    opacity: 0.05 !important;
+}
+
+.board_list_info .search_form .search_btn {
+    display: block;
+    flex: 0 0 auto;
+    width: 1.7777777778em;
+    height: 1.7777777778em;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Cpath fill='%23121212' d='M28.2,25.7l-5.3-5.3c1.3-1.8,2.1-4,2.1-6.4c0-6.1-4.9-11-11-11S3,7.9,3,14s4.9,11,11,11c2.6,0,5-0.9,6.9-2.4 l5.3,5.3c0.6,0.6,1.5,0.6,2.1,0C28.8,27.3,28.8,26.3,28.2,25.7z M14,22c-4.4,0-8-3.6-8-8s3.6-8,8-8s8,3.6,8,8S18.4,22,14,22z'/%3E%3C/svg%3E%0A") no-repeat center/100% auto
+}
+
+.board_list_info .search_form .line {
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: var(--color-black);
+    overflow: hidden;
+}
+
+.board_list_info {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin-bottom: 2em;
+
+}
+footer{
+    background-color: black;
+    color: white;
+}
+
+.first-line{
+    border-bottom: 1px solid #392d23;
+}
+
+.second-line a{
+    color: white;
+    text-decoration: none;
+}
+
+@media  screen and (max-width:48rem){
+    .first-line{
+        text-align:center;
+    }
+}
+
+@media screen and(max-width:48rem) {
+    .second-line{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-bottom: 1px solid #392d23;
+    }
+
+}
+
+.third-line{
+    display: none;
+}
+
+@media screen and(max-width:48rem) {
+    .third-line{
+        display: block;
+    }
+}
 

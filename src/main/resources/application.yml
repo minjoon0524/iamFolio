@@ -26,7 +26,7 @@ spring:
   ####################################
   jpa:
     hibernate:
-      ddl-auto: create     # create, update, ...
+      ddl-auto: update # create, update, ...
       naming:
         physical-strategy: org.hibernate.boot.model.naming.CamelCaseToUnderscoresNamingStrategy
     show-sql: true           # SQL 구문 보이기
@@ -42,7 +42,15 @@ spring:
     user:
       name: test@test.com
       password: 1111
-  servlet:
-    multipart:
-      max-file-size: 10MB         # 파일 업로드 최대 크기
-      max-request-size: 100MB      # 파일 업로드 최대 크기
+
+
+  spring:
+    servlet:
+      multipart:
+        enabled: false
+        max-file-size: 3000MB
+        max-request-size: 3000MB
+
+  server:
+    tomcat:
+      max-http-form-post-size: 2000MB

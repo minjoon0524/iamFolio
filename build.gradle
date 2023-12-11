@@ -1,3 +1,10 @@
+// querydsl 추가 1
+buildscript {
+	ext {
+		queryDslVersion = "5.0.0"
+	}
+}
+
 plugins {
 	id 'java'
 	id 'org.springframework.boot' version '3.1.5'
@@ -22,6 +29,7 @@ repositories {
 }
 
 dependencies {
+	implementation 'org.springframework:spring-core'
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
 	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
 	implementation 'nz.net.ultraq.thymeleaf:thymeleaf-layout-dialect:3.3.0'
@@ -29,10 +37,21 @@ dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-validation'
 	implementation 'org.modelmapper:modelmapper:3.2.0'
+	implementation 'javax.validation:validation-api:2.0.1.Final'
+	implementation 'commons-fileupload:commons-fileupload:1.4'
+	implementation 'commons-io:commons-io:2.11.0'
+	implementation 'org.apache.tika:tika-core:2.4.1'
 	compileOnly 'org.projectlombok:lombok'
 	runtimeOnly 'com.mysql:mysql-connector-j'
 	annotationProcessor 'org.projectlombok:lombok'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+
+	// querydsl 추가 2
+	implementation "com.querydsl:querydsl-jpa:${queryDslVersion}:jakarta"
+	annotationProcessor(
+			"jakarta.persistence:jakarta.persistence-api",
+			"jakarta.annotation:jakarta.annotation-api",
+			"com.querydsl:querydsl-apt:${queryDslVersion}:jakarta")
 }
 
 tasks.named('bootBuildImage') {
@@ -42,3 +61,14 @@ tasks.named('bootBuildImage') {
 tasks.named('test') {
 	useJUnitPlatform()
 }
+
+// querydsl 추가 3
+sourceSets {
+	main {
+		java {
+			srcDirs = ["$projectDir/src/main/java", "$projectDir/build/generated"]
+		}
+	}
+}
+
+compileJava.dependsOn('clean')

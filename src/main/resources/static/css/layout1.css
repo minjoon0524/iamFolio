@@ -121,3 +121,60 @@ h5{
     margin-bottom: 30px;
 }
 
+footer{
+    background-color: black;
+    color: white;
+}
+
+.first-line{
+    border-bottom: 1px solid #392d23;
+}
+
+.second-line a{
+    color: white;
+    text-decoration: none;
+}
+
+@media  screen and (max-width:48rem){
+    .first-line{
+        text-align:center;
+    }
+}
+
+@media screen and(max-width:48rem) {
+    .second-line{
+        padding-left: 2rem;
+        padding-right: 2rem;
+        border-bottom: 1px solid #392d23;
+    }
+
+}
+
+.third-line{
+    display: none;
+}
+
+@media screen and(max-width:48rem) {
+    .third-line{
+        display: block;
+    }
+}
+
+
+.resellerapply_section  {
+    background: url(https://vendor-cdn.imweb.me/images/main/edu_bg.png) no-repeat center 0;
+    background-size: cover;
+    position: relative;
+    padding: 100px 0;
+}
+
+.text-bright {
+    color: #fff;
+}
+.section-main-apps {
+    padding: 45px 0 0 0;
+    background-image: url(https://vendor-cdn.imweb.me/images/main/main_sample04_new2_kr.png?v2);
+    background-repeat: no-repeat;
+    min-height: 790px;
+    background-position: 49% 100%;
+}

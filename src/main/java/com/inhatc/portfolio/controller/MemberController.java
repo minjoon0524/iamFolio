@@ -3,9 +3,14 @@ package com.inhatc.portfolio.controller;
 import com.inhatc.portfolio.dto.MemberFormDto;
 import com.inhatc.portfolio.entity.Member;
 import com.inhatc.portfolio.service.MemberService;
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 import lombok.RequiredArgsConstructor;
 import jakarta.validation.Valid;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.authentication.logout.SecurityContextLogoutHandler;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -17,7 +22,26 @@ import org.springframework.web.bind.annotation.PostMapping;
 public class MemberController {
     private final MemberService memberService;
     private final PasswordEncoder passwordEncoder;
+    @GetMapping("/member/login")
+    public String loginForm(){
+        return "member/memberLoginForm";
+    }
 
+    //logout기능
+    @GetMapping("/member/logout")
+    public String logoutMember(HttpServletRequest request, HttpServletResponse response) {
+        Authentication authentication= SecurityContextHolder.getContext().getAuthentication();
+        if(authentication !=null){
+            new SecurityContextLogoutHandler().logout(request,response,authentication);
+        }
+        return"redirect:/";
+    }
+
+    @GetMapping("/member/login/errer")
+    public String loginError(Model model){
+        model.addAttribute("loginErrorMsg","아이디 또는 비밀번호가 일치하지 않습니다. ");
+        return "member/memberLoginForm";
+    }
     @GetMapping("/member/new")
     public String memberForm(Model model){
         model.addAttribute("memberFormDto",new MemberFormDto());

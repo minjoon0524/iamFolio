@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout2.html}">
+<head>
+  <title>게시글 수정</title>
+</head>
+<body>
+<div layout:fragment="content">
+  <form method="post" th:action="@{/board/update}" th:object="${dto}">
+    <input type="hidden" th:field="*{id}">
+    <div class="container text-center mt-5 mb-5 d-flex justify-content-center align-items-center border p-3"
+         style="height: 100vh;">
+      <div class="">
+        <div>
+          <h2><strong color="sky" class="board-first ">imFolio를 <br>방문해주셔서 감사합니다</strong></h2>
+          <p class="fw-bolder">iamFolio 통해, 포트폴리오를 살펴보세요.</p>
+        </div>
+
+
+        <div class="col-12 align-items-center">
+          <div class="row form-floating mb-3">
+            <input type="text" class="form-control" id="email" placeholder="email" name="email"
+                   th:value="${dto.email}" disabled>
+            <label for="email">email</label>
+          </div>
+          <div class="row align-items-start form-floating mb-3">
+            <input type="text" class="col form-control" id="title" name="title" placeholder="Title"
+                   th:value="${dto.title}">
+            <label for="title">Title</label>
+          </div>
+          <div class="row form-floating mb-3">
+            <input type="text" class="form-control" id="description" name="description" placeholder="Description"
+                   th:value="${dto.description}">
+            <label for="description">Description</label>
+          </div>
+          <div class="row form-floating mb-3">
+                            <textarea class="form-control" placeholder="content" id="content" name="content"
+                                      style="height: 150px" required>[[${dto.content}]]</textarea>
+            <label for="content">Comments</label>
+          </div>
+
+          <div style="text-align: center;">
+            <button class="button-style p-3 m-3" th:onclick="'return confirmUpdate('+ ${dto.id} +');'">FortFolio 수정하기</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+
+
+</div>
+<div class="last"></div>
+<input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+
+<script th:inline="javascript">
+  /*<![CDATA[*/
+  function confirmUpdate(id) {
+    if (confirm('수정하시겠습니까?')) {
+      location.href='/board/update/' + id;
+    }
+  }
+</script>
+</body>
+</html>

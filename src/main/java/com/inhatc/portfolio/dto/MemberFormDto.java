@@ -19,6 +19,7 @@ public class MemberFormDto {
 
     @NotEmpty(message = "이메일은 필수 항목 입니다.")  // NULL체크 및 문자열의 경우 길이 0 인지 검사
     @Email(message = "이메일 형식이 올바르지 않습니다.")  // 이메일 형식이 올바른지 검증한다.
+
     private String email;
 
     @NotEmpty(message = "비밀번호는 필수 항목 입니다.")
