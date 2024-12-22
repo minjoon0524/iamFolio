@@ -35,6 +35,7 @@
 
 ### 2) 파일 업로드
 - 프로젝트 파일과 대표이미지를 설정하고 업로드 가능합니다. <br>
+
 |파일 업로드|
 |:---:|
 ![파일 업로드](https://github.com/user-attachments/assets/b5e44195-5abe-4e14-a1ad-adc45f922348)
