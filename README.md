@@ -31,7 +31,7 @@
 
 |로그인|
 |:---:|
-![로그인](https://github.com/user-attachments/assets/4127e813-12ec-4bd트 업로드
+![로그인](https://github.com/user-attachments/assets/10f04b02-703d-4160-b5ca-21993016390f)
 - 프로젝트 파일과 대표이미지를 설정하고 업로드 가능합니다. <br>
 
 |파일 업로드|
