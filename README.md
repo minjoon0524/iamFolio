@@ -33,14 +33,15 @@
 |:---:|
 ![로그인](https://github.com/user-attachments/assets/10f04b02-703d-4160-b5ca-21993016390f)
 - 프로젝트 파일과 대표이미지를 설정하고 업로드 가능합니다. <br>
-
+### 2) 파일 업로드
 |파일 업로드|
 |:---:|
 ![파일 업로드](https://github.com/user-attachments/assets/b5e44195-5abe-4e14-a1ad-adc45f922348)
 
-### 4) 프로젝트 상세조회,다운로드,수정
+### 3) 프로젝트 상세조회,다운로드,수정
 - 업로드한 프로젝트를 상세 조회 및 다운로드 가능하며, 내용 수정이 가능합니다. <br>
 
+### 4) 파일 다운로드 및 수정
 |파일 다운로드 및 수정|
 |:---:|
 ![파일 다운로드 및 수정](https://github.com/user-attachments/assets/bac87a2a-2fcc-49e3-a261-e56021311f2d)
