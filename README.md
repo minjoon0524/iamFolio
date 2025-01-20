@@ -1,5 +1,5 @@
 ## 1. 프로젝트 소개
-- 프로젝트 이름 : iamFolio
+- 프로젝트 이름 : IamFolio
 - 프로젝트 내용 : 포트폴리오 관리를 위한 게시판 웹서비스 
 
 ### 개발 기간
@@ -12,7 +12,7 @@
 - 로그인 및 회원가입 
 - 파일 업로드 및 다운로드 
 - 게시물 등록,수정,삭제
-- 보안 : SpringSecurity
+- SpringSecurity 활용
 
 ## 3. 개발환경
 | Environment | Frontend                                                                                                  | Backend                                                                                             | Database                                                                                   | Template Engine                                                                                 |
