@@ -25,7 +25,8 @@
 
   <div class="container mt-5" >
     <div class="board_list_info">
-      <span class="info">총 <b class="point">1</b>건</span>
+      <!--      boardList 건수 출력-->
+      <span class="info">총 <b class="point" th:text="${#lists.size(boardList)}">0</b>건</span>
       <form id="boardSearchVo" class="search_form" action="./board_list.do" method="post">
         <legend class="text_hide">게시판 검색</legend>
         <div class="search_box">
@@ -62,11 +63,11 @@
       </tbody>
     </table>
 
-  <div class="last"></div>
-  <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
+    <div class="last"></div>
+    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}">
 
 
-</div>
+  </div>
 </div>
 </body>
 </html>
