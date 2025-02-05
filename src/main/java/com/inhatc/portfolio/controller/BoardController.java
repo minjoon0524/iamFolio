@@ -19,10 +19,7 @@ import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.multipart.MultipartFile;
 
 import java.util.List;
@@ -166,6 +163,14 @@ public class BoardController {
         headers.add(HttpHeaders.CONTENT_TYPE, "application/zip");
         headers.add(HttpHeaders.CONTENT_TYPE, "application/pdf");
         return new ResponseEntity<>(data, headers, HttpStatus.OK);
+    }
+
+    @GetMapping("/board/keyword")
+    public String Home(@RequestParam(name = "keyword", defaultValue = "") String keyword, Model model) {
+        List<BoardResponseDto> searchList = boardService.getSearchList(keyword);
+        model.addAttribute("searchList", searchList);
+        model.addAttribute("keyword", keyword);  // 검색어를 템플릿에 전달
+        return "board/home";
     }
 
 
