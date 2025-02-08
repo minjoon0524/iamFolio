@@ -58,10 +58,11 @@ public class BoardService {
         }
 
     }
-
+    // 전체 리스트 가져오는 로직
     public List<BoardResponseDto> boardList() {
         List<Board> boards = boardRepository.findAll();
         List<BoardResponseDto> boardDTOs = new ArrayList<>();
+
 
         for (Board board : boards) {
             BoardResponseDto result = BoardResponseDto.builder()
@@ -77,6 +78,27 @@ public class BoardService {
         return boardDTOs;
     }
 
+    // 검색한 리스트를 가져오는 로직
+    public List<BoardResponseDto> getSearchList(String keyword){
+        //키워드가 포함 되어 있으면, List 출력
+        List<Board> keywordList = boardRepository.findByTitleOrContent(keyword);
+        // 받아온 데이터 DTO에 담을 준비
+        List<BoardResponseDto> boardDTOs = new ArrayList<>();
+        for (Board board : keywordList) {
+            BoardResponseDto result = BoardResponseDto.builder()
+                    .title(board.getTitle())
+                    .content(board.getContent())
+                    .email(board.getEmail())
+                    .createdAt(board.getCreatedAt())
+                    .id(board.getId())
+                    .build();
+            boardDTOs.add(result);
+        }
+
+
+        return boardDTOs;
+
+    }
 
     public BoardResponseDto getBoard(Long id) {
         Board board = boardRepository.findById(id)
